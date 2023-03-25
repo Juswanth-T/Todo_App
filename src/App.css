@@ -1,0 +1,108 @@
+html{
+    
+    background: rgb(3,229,227);
+background: linear-gradient(90deg, rgba(3,229,227,1) 0%, rgba(173,254,253,1) 30%, rgba(176,255,254,1) 69%, rgba(3,229,227,1) 100%);}
+.App1{
+    font-family:"Century";
+}
+.App2{
+    text-align:center;
+    color:rgb(255, 47, 113);
+    font-size:35px;
+    font-family:"Footlight MT Light",serif;
+    text-shadow:2px 0px 1px red;
+    font-weight:bold;
+    margin-top:10px;
+}
+.shift{
+   top:300px;
+}
+ .Cross1{
+    font-size:17px;
+    margin-left:410px;
+    margin-top:3px;
+    margin-bottom:0px;
+    margin-right:410px;
+    border-style:groove;
+    padding:10px;
+    word-break: break-all;
+    border-width: 3px;
+    background: linear-gradient(90deg, rgba(255,237,177,1) 30%, rgba(252,255,241,1) 100%);
+    
+}
+.Cross2{
+    text-decoration:line-through;
+    text-decoration-color:#c5004c;
+    text-decoration-thickness: 2px;
+    
+}
+
+.Form1{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:5px;
+  
+  
+}
+.Form2{
+    font-size:22px;
+    text-shadow:2px 0px 3px rgb(6, 123, 123);
+}
+.button4{
+    cursor: pointer;
+    margin:2px;
+    font-size: 16px;
+    padding: 5px 15px;
+    background: linear-gradient(90deg, rgba(56,56,56,1) 44%, rgba(71,71,71,1) 100%);
+    color:white;
+    border:none;
+    border-radius:10%;
+    
+    
+
+}
+.button4:hover{
+    opacity:0.85;
+}
+
+ .Finished{
+    font-size:15px;
+   position:absolute;
+   right:470px;
+   margin-bottom:10px;
+   padding:2px 6px;
+   background: linear-gradient(90deg, rgba(149,255,219,1) 19%, rgba(184,255,221,1) 100%);
+   border-style:solid;
+   border-width: 1px;
+   border-color:deeppink;
+   cursor:pointer;
+   border-radius:10%;
+   
+
+}  
+.Finished:hover{
+    background:#6ef5c9;
+}
+.Finished1{
+    
+    right:440px;  
+    background: linear-gradient(90deg, rgba(255,77,98,1) 12%, rgba(253,128,128,1) 79%);
+}
+.Finished1:hover{
+    background:#ff3636 ;
+}
+.Input{
+    font-size:15px;
+    padding: 5px 5px;
+    width:262px;
+    margin-left:3px;
+    background: linear-gradient(90deg, rgba(177,206,255,1) 21%, rgba(203,213,255,1) 100%);
+    border-color:darkcyan;
+    border-radius:3%;
+    color:black;
+    border-style:solid;
+}
+.Add{
+    background: linear-gradient(48deg, rgba(3,229,227,1) 0%, rgba(255,51,51,1) 0%, rgba(255,87,124,1) 100%);
+}
