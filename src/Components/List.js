@@ -6,6 +6,7 @@ class List extends Component {
     state = {
         todos: [],
         todoToShow: "all",
+        btn:"btn1"
 
     };
     addTodo = todo => {
@@ -32,9 +33,11 @@ class List extends Component {
             })
         })
     }
-    updateTodoToShow = (s) => {
+    updateTodoToShow = (param) => {
+        let {type,button} = param;
         this.setState({
-            todoToShow: s
+            todoToShow: type,
+            btn: button
         })
     }
 
@@ -44,14 +47,20 @@ class List extends Component {
         });
 
     };
-    removeAll = () => {
+    removeAll = (e) => {
         this.setState({
-            todos: this.state.todos.filter(todo => !todo.text)
+            todos: this.state.todos.filter(todo => !todo.text),
+            btn:e
         })
     }
     render() {
 
         let todos = [];
+        let btn1 = (this.state.btn === "btn1") ? "btn1":null
+        let btn2 = (this.state.btn === "btn2") ? "btn2":null
+        let btn3 = (this.state.btn === "btn3") ? "btn3":null
+        let btn4 = (this.state.btn === "btn4") ? "btn4":null
+
 
         if (this.state.todoToShow === "all") {
             todos = this.state.todos;
@@ -68,10 +77,10 @@ class List extends Component {
                     Todos left: {this.state.todos.filter(todo => !todo.complete).length}
                 </div>
                 <div className="Form1">
-                    <button onClick={() => this.updateTodoToShow("all")} className="button4 App1">All</button>
-                    <button onClick={() => this.updateTodoToShow("active")} className="button4 App1">Active</button>
-                    <button onClick={() => this.updateTodoToShow("complete")} className="button4 App1">Completed</button>
-                    <button onClick={this.removeAll} className="button4 App1">Clear all </button>
+                    <button onClick={() => this.updateTodoToShow({type: "all",button: "btn1"})} className={`button4 App1 ${btn1}`}>All</button>
+                    <button onClick={() => this.updateTodoToShow({type: "active",button: "btn2"})} className={`button4 App1 ${btn2}`}>Active</button>
+                    <button onClick={() => this.updateTodoToShow({type: "complete",button: "btn3"})} className={`button4 App1 ${btn3}`}>Completed</button>
+                    <button onClick={() => this.removeAll("btn4")} className={`button4 App1 ${btn4}`}>Clear all </button>
                 </div>
                 <Form onSubmit={this.addTodo} />
                 {todos.map(todo => (<Cross key={todo.id}
